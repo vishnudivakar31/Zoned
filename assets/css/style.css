@@ -4,6 +4,12 @@ html, body {
   height: 100%;
 }
 
+body {
+  background-color: #181818;
+  font-size: 14px;
+  min-width: 720px;
+}
+
 * {
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
     color: #fff;
@@ -191,4 +197,45 @@ html, body {
 
 .navItemLink:hover {
   color: #fff;
+}
+
+.mainViewContainer {
+  margin-left: 220px;
+  padding-bottom: 90px;
+  width: calc(100% - 220px);
+}
+
+.mainContent {
+  padding: 0 20px;
+}
+
+.pageHeadingBig {
+  padding: 20px;
+  text-align: center;
+}
+
+.gridViewItem {
+  display: inline-block;
+  margin-right: 20px;
+  width: 29%;
+  max-width: 200px;
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+
+.gridViewItem img {
+  width: 100%;
+}
+
+.gridViewItem a {
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.gridViewInfo {
+  font-weight: 300;
+  text-align: center;
+  padding: 5px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
