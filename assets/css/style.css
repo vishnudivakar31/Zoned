@@ -335,7 +335,7 @@ body {
   cursor: pointer;
 }
 
-.trackListRow .trackListRow:hover .trackOptions img {
+.trackListRow:hover .trackOptions img {
   visibility: visible;
 }
 

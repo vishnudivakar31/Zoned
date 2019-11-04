@@ -17,6 +17,9 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/script.js">
+    </script>
     <title>Zoned</title>
     <link rel="icon" href="assets/images/logo.png">
   </head>
