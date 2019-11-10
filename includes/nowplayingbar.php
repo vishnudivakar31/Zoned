@@ -16,7 +16,22 @@
   });
 
   function setTrack(trackId, newPlaylist, play) {
-    audioElement.setTrack('assets/music/bensound-acousticbreeze.mp3');
+    $.post("includes/handlers/ajax/getSongJson.php", { songId: trackId}, function(data) {
+      var track = JSON.parse(data);
+      $(".trackName span").text(track.title);
+
+      $.post("includes/handlers/ajax/getArtistJson.php", { artistId: track.artist}, function(data) {
+        var artist = JSON.parse(data);
+        $(".artistName span").text(artist.name);
+      });
+
+      $.post("includes/handlers/ajax/getAlbumJson.php", { albumId: track.album}, function(data) {
+        var album = JSON.parse(data);
+        $(".albumLink img").attr("src", album.artworkPath);
+      });
+
+      audioElement.setTrack(track.path);
+    });
     if(play) {
       audioElement.play();
     }
@@ -41,17 +56,17 @@
       <div class="content">
 
         <span class="albumLink">
-          <img src="https://www.doc.gold.ac.uk/creativeprojects/wp-content/uploads/2016/10/unnamed.jpg" alt="album" class="albumArtwork">
+          <img src="" alt="album" class="albumArtwork">
         </span>
 
         <div class="trackInfo">
 
           <span class="trackName">
-            <span>Happy Birthday</span>
+            <span></span>
           </span>
 
           <span class="artistName">
-            <span>Vishnu Divakar</span>
+            <span></span>
           </span>
 
         </div>
